@@ -20,9 +20,7 @@
             <div class="relative flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
                 <div class="max-w-2xl rounded-[1.5rem] border border-white/70 bg-white/75 px-6 py-6 shadow-[0_18px_45px_-36px_rgba(15,23,42,0.28)] backdrop-blur sm:px-7 sm:py-7 lg:px-8 lg:py-8">
                     <p class="text-[11px] font-semibold uppercase tracking-[0.34em] text-slate-400">Platform command center</p>
-                    <h1 class="mt-4 text-3xl font-semibold tracking-[-0.05em] text-slate-950 sm:text-[3.15rem]">
-                        {{ auth()->user()?->name ?: 'Super Admin' }}
-                    </h1>
+                    <h1 class="mt-4 text-3xl font-semibold tracking-[-0.05em] text-slate-950 sm:text-[3.15rem]">Super Admin Dashboard</h1>
                     <p class="mt-4 max-w-xl text-sm leading-7 text-slate-600 sm:text-base">
                         Monitor school growth, platform usage, and tenant health from one clean control surface built for daily operations.
                     </p>

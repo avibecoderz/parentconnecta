@@ -30,22 +30,13 @@
             <div class="pc-auth-orb right-[12%] top-[18%] hidden h-32 w-32 bg-slate-200/70 sm:block"></div>
 
             <div class="relative w-full max-w-md">
-                <div class="mb-6 flex items-center justify-between px-1">
-                    <a href="/" wire:navigate class="inline-flex items-center gap-3">
-                        <span class="pc-icon-badge h-12 w-12 rounded-[1.1rem] bg-[var(--pc-primary)] text-white shadow-[0_18px_42px_-26px_rgba(13,59,102,0.65)]">
-                            <x-application-logo class="h-6 w-6 fill-current" />
-                        </span>
-                        <span class="text-left">
+                <div class="mb-6 flex items-center justify-center px-1">
+                    <a href="/" wire:navigate class="inline-flex items-center">
+                        <span class="text-center">
                             <span class="block text-lg font-semibold tracking-tight text-slate-950">ParentConnecta</span>
                             <span class="pc-eyebrow text-slate-400">Secure Access</span>
                         </span>
                     </a>
-
-                    <span class="inline-flex h-11 w-11 items-center justify-center rounded-[1rem] bg-white/80 text-slate-500 shadow-[0_18px_40px_-30px_rgba(15,23,42,0.18)] ring-1 ring-slate-200/70 backdrop-blur">
-                        <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                            <path d="M10 2a4.5 4.5 0 0 0-4.5 4.5v1.84c0 .58-.23 1.14-.64 1.55L4 10.8V12h12v-1.2l-.86-.9a2.2 2.2 0 0 1-.64-1.56V6.5A4.5 4.5 0 0 0 10 2Zm0 16a2.5 2.5 0 0 0 2.45-2h-4.9A2.5 2.5 0 0 0 10 18Z" />
-                        </svg>
-                    </span>
                 </div>
 
                 <div class="pc-auth-card">

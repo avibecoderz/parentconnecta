@@ -12,17 +12,21 @@ class EnsureUserBelongsToSchool
     public function handle(Request $request, Closure $next): Response
     {
         $user = $request->user();
-        $school = $request->attributes->get('currentSchool');
+        $school = $request->attributes->get('currentSchool ');
 
-        abort_unless($school instanceof School, 404);
-        abort_unless($user !== null, 403);
-        abort_unless($user->isActive(), 403);
+        if (! $school instanceof School) {
+            abort(500, 'Current school context is missing.');
+        }
 
-        if ($user->isSuperAdmin()) {
+        abort_unless($user !== null, 403, 'You must be logged in to access this school.');
+
+        abort_unless($user->isActive(), 403, 'Your account is inactive Call 08062902098.');
+
+        if ($user->hasRole('super_admin')) {
             return $next($request);
         }
 
-        abort_unless($user->belongsToSchool($school), 403);
+        abort_unless($user->belongsToSchool($school), 403, 'You do not belong to this school Call 08062902098.');
 
         return $next($request);
     }

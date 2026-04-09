@@ -125,6 +125,32 @@
                             </a>
                         @endforeach
                     </div>
+
+                    <div class="border-t border-slate-100 px-4 py-4 sm:px-6">
+                        <p class="text-sm font-medium text-slate-900">{{ $user?->name }}</p>
+                        <p class="mt-1 text-sm text-slate-500">{{ $user?->email }}</p>
+
+                        <div class="flex flex-col gap-2">
+                            <a
+                                href="{{ route('profile') }}"
+                                wire:navigate
+                                class="pc-btn-secondary mt-4 w-full text-center"
+                            >
+                                Profile
+                            </a>
+
+                            <form method="POST" action="{{ route('logout') }}">
+                                @csrf
+
+                                <button
+                                    type="submit"
+                                    class="pc-btn-primary w-full"
+                                >
+                                    Sign out
+                                </button>
+                            </form>
+                        </div>
+                    </div>
                 </header>
 
                 @if (isset($header))
